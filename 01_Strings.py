@@ -5,6 +5,8 @@
 
 # print(a[0:5])  #slicing
 # print(a[-8:-4])  #negative indexing, counts from end of string, -1 is last character
+# if we write like [:5] it means from start to index 5
+# if we write like [2:] it means from index 2 to end of string
 
 
 
