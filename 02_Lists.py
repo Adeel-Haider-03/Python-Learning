@@ -41,6 +41,9 @@ list2=[12,"adeel",True,5.6]
 
 
 #----------------------------------------#list comprehension----------------------------------#
+# The Syntax
+#  [expression for item in iterable if condition == True]
+
 
 print([x for x in range(10)])   #list comprehension with range {0-10 value print karega}
 
@@ -48,5 +51,11 @@ list4=['adeel','awais','zeeshan','noor','ahmed']
 print([name for name in list4])
 
 
-newlist=[x for x in list4 if 'r' in x]      #will only print noor
+# newlist=[x for x in list4 if 'r' in x]      #will only print noor
+
+newlist=[x.upper() for x in list4 if 'r' in x]   #will print NOOR in uppercase
+
 print(newlist)
+print([x for x in list4 if x!="awais"])  #will print all names except awais
+
+print([x if x == "adeel" else "Baba" for x in list4])  #if name is adeel print adeel otherwise print baba
