@@ -59,3 +59,28 @@ print(newlist)
 print([x for x in list4 if x!="awais"])  #will print all names except awais
 
 print([x if x == "adeel" else "Baba" for x in list4])  #if name is adeel print adeel otherwise print baba
+
+
+#----------------------------------------#Sorting#----------------------------------#
+
+list5=[100,20,300,40,500,60]
+
+# list5.sort()  #sort in ascending order
+# list5.sort(reverse=True) #sort in descending order
+# print(list5)
+
+# list6=["banana","apple","cherry","mango"]
+# list6.sort()  #sort in alphabetical order
+list6=["banana","apple","Cherry","mango"]
+# list6.sort()                                     #will sort Cherry first due to capital alphabet
+list6.sort(key=str.lower)                        #will sort in alphabetical order ignoring case sensitivity
+print(list6)
+
+
+#customize function---------You can also customize your own function by using the keyword argument key = function.
+
+def myfunc(n):
+    return n%3==0
+
+list5.sort(key=myfunc,reverse=True)
+print(list5)   #will sort even numbers first then odd numbers
