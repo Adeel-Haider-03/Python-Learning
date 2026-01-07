@@ -1,7 +1,7 @@
 #List is a collection which is ordered (anything added will go to last) and changeable(meaning that we can change, add, and remove items in a list after it has been created). Allows duplicate members.It is mutable.
 
 
-list=[2,3,4,5,6,7,8,9,10]
+# list=[2,3,4,5,6,7,8,9,10]
 # list[2:5]=[20,30,40]   #replace values from index 2 se 5
 # print(list)
 # print(list[2:5])    #print index 2 se 5 tak
@@ -84,3 +84,22 @@ def myfunc(n):
 
 list5.sort(key=myfunc,reverse=True)
 print(list5)   #will sort even numbers first then odd numbers
+
+
+#----------------------------------------#Copying a list#----------------------------------#
+list7=[1,2,3,4,5]
+#list8=list7            #this will not create a copy of list7 rather it will create a reference of list7
+# list8=list7.copy()   #this will create a copy of list7
+# list8=list(list7)        #this will also create a copy of list7
+list8=list7[:]      #this will also create a copy of list7
+print(list8)
+
+#----------------------------------------#Joining two lists#----------------------------------#
+list9=[10,20,30]
+list10=[40,50,60]
+# list11=list9+list10   #joining two lists
+# for x in list10:
+#     list9.append(x)     #joining two lists using loop
+# print(list9)
+list9.extend(list10)   #joining two lists using extend() method
+print(list9)
