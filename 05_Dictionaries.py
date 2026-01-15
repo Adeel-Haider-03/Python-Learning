@@ -54,8 +54,8 @@ myFamily={
 #         print(values)
 
 # The fromkeys() method returns a dictionary with the specified keys and the specified value.
-x=("name")
+x=(0,1,2)
 y=("adeel"," ahmed", "ali")
 
-mydict=dict.fromkeys(x,y)  #for all y values x will be key
+mydict=dict.fromkeys(x,y)  #for all x acting as key y will be the value
 print(mydict)
