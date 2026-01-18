@@ -13,5 +13,12 @@
 #     print(i)
 
 
-for x in range(0,20,4):
-    print(x)
+# for x in range(0,20,4):
+#     print(x)
+
+print(list(range(0,20,4)))
+
+r=range(10)
+print(r[0])
+print(r[9]) 
+print(list(r[2:7]))
