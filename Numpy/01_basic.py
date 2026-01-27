@@ -13,3 +13,4 @@ print((arr2.ndim))
 print((arr2.shape))  
 
 print(arr2[0,1,1])
+print(arr2[0,2,3])
