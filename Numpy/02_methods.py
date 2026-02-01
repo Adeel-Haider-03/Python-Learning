@@ -42,5 +42,8 @@ arr2=np.array([5,6,7,8])
 # concatArr=np.hstack((arr1,arr2)) #horizontal stack
 concatArr=np.dstack((arr1,arr2)) #depth stack
 
-print(concatArr)
+# print(concatArr)
 
+#spliting
+newArr=np.array_split(concatArr,3)  #split arr into 3 parts
+print(newArr)  #list of arrays
