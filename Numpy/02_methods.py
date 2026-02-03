@@ -53,3 +53,8 @@ arr4=np.array([[1,2,3,4],[5,6,7,8]])
 # newArr=np.vsplit(arr4,2)  #vertical split into 2
 newArr=np.dsplit(concatArr,2)  #depth split into 2
 print(newArr)  #list of arrays
+
+
+#search
+x=np.where(arr4>5)  #return indices where condition is true
+print(x)
