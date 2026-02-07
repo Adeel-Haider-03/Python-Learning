@@ -21,3 +21,4 @@ print(newArr2)  #prints [6 7 8 9]
 
 a=arr[arr%2==0] # filter even numbers, we can pass condition directly inside the square brackets
 print(a)  #prints [2 4 6 8]
+
