@@ -38,3 +38,18 @@ print(y) #array of 2 rows and 5 columns with only elements from [10,20,30,40,50]
 
 z=random.choice(array,size=(2,3,3)) #randomly selects elements only from given array to create 2,5 array without replacement
 print(z) #array of 2 rows and 5 columns with only elements from [10,20,30,40,50] without replacement
+
+
+
+
+#Data Distribution Methods
+
+#we can generate random numbers based on probabilty
+
+ #generate an array of 100 elements where 1 has 10% chance, 2 has 30% chance, 3 has 20% chance, 4 has 20% chance and 5 has 0% chance of being selected, even we will genrate an array of 100 elements, but 5 will never occur
+
+arr=random.choice([1,2,3,4,5],p=[0.1,0.3,0.4,0.2,0.0],size=(100)) #also sum of probabilities should be 1
+print(arr)
+
+arr2=random.choice([1,2,3,4,5],p=[0.1,0.3,0.4,0.2,0.0],size=(3,4)) #2D array
+print(arr2)
