@@ -28,16 +28,16 @@ from numpy import random
 
 #choice() method is used to generate a random sample from a given 1-D array
 
-array=np.array([10,20,30,40,50])
+# array=np.array([10,20,30,40,50])
 
-x=random.choice(array)  #randomly selects one element from the array
-print(x)
+# x=random.choice(array)  #randomly selects one element from the array
+# print(x)
  
-y=random.choice(array,size=(2,5)) # radnomly selects elements only from given array to create 2,5 array
-print(y) #array of 2 rows and 5 columns with only elements from [10,20,30,40,50]
+# y=random.choice(array,size=(2,5)) # radnomly selects elements only from given array to create 2,5 array
+# print(y) #array of 2 rows and 5 columns with only elements from [10,20,30,40,50]
 
-z=random.choice(array,size=(2,3,3)) #randomly selects elements only from given array to create 2,5 array without replacement
-print(z) #array of 2 rows and 5 columns with only elements from [10,20,30,40,50] without replacement
+# z=random.choice(array,size=(2,3,3)) #randomly selects elements only from given array to create 2,5 array without replacement
+# print(z) #array of 2 rows and 5 columns with only elements from [10,20,30,40,50] without replacement
 
 
 
@@ -48,8 +48,21 @@ print(z) #array of 2 rows and 5 columns with only elements from [10,20,30,40,50]
 
  #generate an array of 100 elements where 1 has 10% chance, 2 has 30% chance, 3 has 20% chance, 4 has 20% chance and 5 has 0% chance of being selected, even we will genrate an array of 100 elements, but 5 will never occur
 
-arr=random.choice([1,2,3,4,5],p=[0.1,0.3,0.4,0.2,0.0],size=(100)) #also sum of probabilities should be 1
+# arr=random.choice([1,2,3,4,5],p=[0.1,0.3,0.4,0.2,0.0],size=(100)) #also sum of probabilities should be 1
+# print(arr)
+
+# arr2=random.choice([1,2,3,4,5],p=[0.1,0.3,0.4,0.2,0.0],size=(3,4)) #2D array
+# print(arr2)
+
+
+
+#permutation
+
+arr=np.array([1,2,3,4,5])
+
+x=random.permutation(arr) #returns a new array with the elements of the original array permuted (shuffled) in a random order, but it does not change the original array
+print(x)
 print(arr)
 
-arr2=random.choice([1,2,3,4,5],p=[0.1,0.3,0.4,0.2,0.0],size=(3,4)) #2D array
-print(arr2)
+random.shuffle(arr) #shuffles the original array in place, meaning it modifies the original array and does not return a new array
+print(arr)
