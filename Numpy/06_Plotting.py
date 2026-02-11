@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 x=np.array([1,2,3,4,5])
 y=np.array([3,9,2,5,7])
@@ -45,4 +44,24 @@ y2=np.array([5,7,8,9,10])
 # plt.show()
 
 
+#scatter plot
 
+# plt.scatter(x1,y1,cmap='viridis',c=y1) #cmap is used to specify the color map, c is used to specify the color of the points based on the values of y1
+# plt.colorbar() #colorbar is used to show the color scale for the points
+# plt.show()
+
+
+# #bar plot
+# fruits=['apple','banana','orange','grape','mango']
+# quantities=[10,20,15,5,25]
+# plt.bar(fruits,quantities)
+# # plt.barh(x2,y2) #horizontal bar plot
+# plt.show()
+
+#pie chart
+labels=['apple','banana','orange','grape','mango']
+sizes=[10,20,15,5,25]
+gap=[0,0,0,0,0.2] #gap between slices, it is used to explode the slices
+plt.pie(sizes,labels=labels,autopct='%1.1f%%',explode=gap) #autopct is used to show the percentage of each slice
+plt.legend(title='Fruits')
+plt.show()
