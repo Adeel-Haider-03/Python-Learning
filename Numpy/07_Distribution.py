@@ -15,15 +15,33 @@ import seaborn as sns
 
 
 #normal Distribution
-x=np.random.normal(loc=1, scale=1, size=100) #loc is mean (all values will be centered arounf mean)
+# x=np.random.normal(loc=1, scale=1, size=100) #loc is mean (all values will be centered arounf mean)
 # , scale is standard deviation(mean how far points will be generated from mean, lesser the value closer the points),
 # size is number of elements in array
 # print(x)
 # sns.displot(x, kind="kde")
 # plt.show()
 
-y=np.random.normal(loc=1, scale=1, size=(3,4)) #2D array of 3 rows and 4 columns
-print(y)
-# sns.displot(y)
-# sns.displot(y, kind="kde")
+# y=np.random.normal(loc=1, scale=1, size=(3,4)) #2D array of 3 rows and 4 columns
+# print(y)
+# # sns.displot(y)
+# # sns.displot(y, kind="kde")
+# plt.show()
+
+
+#Bionomial Distribution  (it is descrete while normal distribution is continous)
+#n=number of trials, p=probability of success, size=number of elements in array
+
+toss=np.random.binomial(n=1,p=0.5,size=10) #n=1 means we are tossing a coin once
+print(toss)
+sns.displot(toss,kind='kde')
 plt.show()
+
+#if we increase size it will almost become normal distribution
+data={
+    'normal':np.random.normal(loc=1,scale=1,size=1000),
+    'binomial':np.random.binomial(n=1,p=0.5,size=1000)
+}
+
+# sns.displot(data,kind='kde')
+# plt.show()  
