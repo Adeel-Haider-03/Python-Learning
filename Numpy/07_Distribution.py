@@ -12,7 +12,7 @@ import seaborn as sns
 # sns.displot(x, kind="kde") #shows continous distribution of data, it is a smoothed version of histogram
 # plt.show()
 
-
+#--------------------------------------------------------------------------------------------------------------------#
 
 #normal Distribution
 # x=np.random.normal(loc=1, scale=1, size=100) #loc is mean (all values will be centered arounf mean)
@@ -28,14 +28,15 @@ import seaborn as sns
 # # sns.displot(y, kind="kde")
 # plt.show()
 
+#--------------------------------------------------------------------------------------------------------------------#
 
 #Bionomial Distribution  (it is descrete while normal distribution is continous)
 #n=number of trials, p=probability of success, size=number of elements in array
 
-toss=np.random.binomial(n=1,p=0.5,size=10) #n=1 means we are tossing a coin once
-print(toss)
-sns.displot(toss,kind='kde')
-plt.show()
+# toss=np.random.binomial(n=1,p=0.5,size=10) #n=1 means we are tossing a coin once
+# print(toss)
+# sns.displot(toss,kind='kde')
+# plt.show()
 
 #if we increase size it will almost become normal distribution
 data={
@@ -44,4 +45,14 @@ data={
 }
 
 # sns.displot(data,kind='kde')
-# plt.show()  
+# plt.show() 
+
+
+#----------------------------------------------------------------------------------------------------#
+
+#Poisson Distribution ,It estimates how many times an event can happen in a specified time. e.g. If someone eats twice a day what is the probability he will eat thrice?
+
+x=random.poisson(lam=2, size=1000) #lam is the expected number of events that occur in a fixed interval of time or space
+# print(x)
+sns.displot(x)
+plt.show()
