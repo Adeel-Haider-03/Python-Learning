@@ -30,7 +30,7 @@ import seaborn as sns
 
 #--------------------------------------------------------------------------------------------------------------------#
 
-#Bionomial Distribution  (it is descrete while normal distribution is continous)
+#Bionomial Distribution  (it is descrete while normal distribution is continous), describe outcome of binary scenario
 #n=number of trials, p=probability of success, size=number of elements in array
 
 # toss=np.random.binomial(n=1,p=0.5,size=10) #n=1 means we are tossing a coin once
@@ -52,7 +52,27 @@ data={
 
 #Poisson Distribution ,It estimates how many times an event can happen in a specified time. e.g. If someone eats twice a day what is the probability he will eat thrice?
 
-x=random.poisson(lam=2, size=1000) #lam is the expected number of events that occur in a fixed interval of time or space
-# print(x)
-sns.displot(x)
+# x=random.poisson(lam=2, size=1000) #lam is the expected number of events that occur in a fixed interval of time or space
+# # print(x)
+# sns.displot(x)
+# plt.show()
+
+#-------------------------------------------------------------------------------------#
+#uniform distribution, it is continous distribution where all values are equally likely to occur
+# y=random.uniform(low=0, high=1, size=10) 
+# sns.displot(y)
+# plt.show()
+
+# #-------------------------------------------------------------------------------------#
+
+# #logistic distribution, it is continous distribution used to model growth of population, it is similar to normal distribution but has heavier tails
+# z=random.logistic(loc=0, scale=1, size=1000) #loc is mean, scale is standard deviation
+# sns.displot(z, kind='kde')
+# plt.show()
+
+#-------------------------------------------------------------------------------------#
+#multinomial distribution, it is descrete distribution used to model the probability of outcomes of a multi-class experiment, e.g. rolling a die
+outcomes=random.multinomial(n=1,pvals=[1/6,1/6,1/6,1/6,1/6,1/6],size=10) #n is number of trials, pvals is the probability of each outcome
+print(outcomes)
+sns.displot(outcomes)
 plt.show()
