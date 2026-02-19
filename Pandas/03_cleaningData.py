@@ -27,5 +27,25 @@ data=pd.read_csv('data.csv')
 #why .loc doesn't work here? because .loc is used for label-based indexing,
 # and the index 69 is not a label but a positional index. To use .loc, you would need to set the index of the DataFrame to a column that contains unique labels, or use .iloc for positional indexing.
 
-data.iloc[69, data.columns.get_loc('Duration')]=50  #to replace the value at index 69 in the 'Duration' column with 45
-print(data['Duration'].to_string())
+# data.iloc[69, data.columns.get_loc('Duration')]=50  #to replace the value at index 69 in the 'Duration' column with 45
+# print(data['Duration'].to_string())
+
+# data.dropna(inplace=True)  #drop rows with missing values, inplace=True modifies the original dataframe
+# print(data['Duration'].to_string())
+
+
+# print(data.index) #to check the index of the dataframe, it will show the range of the index and the number of rows in the dataframe
+
+#Output: RangeIndex(start=0, stop=169, step=1)
+
+
+# for x in data.index:
+#     if data.loc[x,'Duration']>200:
+#         data.drop(x, inplace=True)  #to drop rows where the value in the 'Duration' column is greater than 60, inplace=True modifies the original dataframe
+# print(data['Duration'].to_string())
+
+
+# data.drop_duplicates(inplace=True)  #to drop duplicate rows, inplace=True modifies the original dataframe
+# print(data.duplicated().to_string())
+
+
